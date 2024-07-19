@@ -1,5 +1,5 @@
 from .dependencies import Base, engine
 from . import models
 
-# Создание всех таблиц
+# РЎРѕР·РґР°РЅРёРµ РІСЃРµС… С‚Р°Р±Р»РёС†
 Base.metadata.create_all(bind=engine)

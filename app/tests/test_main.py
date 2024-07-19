@@ -36,7 +36,7 @@ def test_read_memes():
     assert isinstance(response.json(), list)
 
 def test_read_meme():
-    # Сначала создадим мем для тестирования
+    # РЎРЅР°С‡Р°Р»Р° СЃРѕР·РґР°РґРёРј РјРµРј РґР»СЏ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ
     response = client.post("/memes/", json={"title": "Test Meme", "description": "Test Description", "image_url": "http://test.com/image.jpg"})
     meme_id = response.json()["id"]
     response = client.get(f"/memes/{meme_id}")
@@ -46,7 +46,7 @@ def test_read_meme():
     assert response.json()["image_url"] == "http://test.com/image.jpg"
 
 def test_update_meme():
-    # Сначала создадим мем для тестирования
+    # РЎРЅР°С‡Р°Р»Р° СЃРѕР·РґР°РґРёРј РјРµРј РґР»СЏ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ
     response = client.post("/memes/", json={"title": "Test Meme", "description": "Test Description", "image_url": "http://test.com/image.jpg"})
     meme_id = response.json()["id"]
     response = client.put(f"/memes/{meme_id}", json={"title": "Updated Meme", "description": "Updated Description", "image_url": "http://test.com/updated_image.jpg"})
@@ -56,7 +56,7 @@ def test_update_meme():
     assert response.json()["image_url"] == "http://test.com/updated_image.jpg"
 
 def test_delete_meme():
-    # Сначала создадим мем для тестирования
+    # РЎРЅР°С‡Р°Р»Р° СЃРѕР·РґР°РґРёРј РјРµРј РґР»СЏ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ
     response = client.post("/memes/", json={"title": "Test Meme", "description": "Test Description", "image_url": "http://test.com/image.jpg"})
     meme_id = response.json()["id"]
     response = client.delete(f"/memes/{meme_id}")
